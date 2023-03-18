@@ -1,0 +1,52 @@
+.Home {
+    width: 100;
+    padding: 25px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Home-description {
+    width: 50%;
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Home-headline {
+    font-size: calc(25px + 3vw);
+    line-height: calc(30px + 3vw);
+}
+
+.Home-headlineBlue {
+    color: rgb(25, 25, 255);
+}
+
+.Home-text {
+    width: 80%;
+    color: rgb(101, 101, 101);
+    font-size: 14px;
+}
+
+.Home-btn {
+    padding: 15px 25px;
+    background: rgb(25, 25, 255);
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.Home-imageContainer {
+    width: 50%;
+    max-height: 95vh;
+}
+
+.Home-image {
+    height: 600px;
+}

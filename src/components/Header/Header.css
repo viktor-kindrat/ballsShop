@@ -1,0 +1,56 @@
+.Header {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 150px;
+}
+
+.Header-logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Header-logoImage {
+    height: 35px;
+}
+
+.Header-logoText {
+    font-family: 'Sansita', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.Heade-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-weight: 400;
+}
+
+.Header-navItem {
+    cursor: pointer;
+}
+
+.Header-controlls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.Header-btn {
+    height: 25px;
+    width: 25px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.Header-btn img {
+    width: 100%;
+}
