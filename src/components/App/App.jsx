@@ -27,7 +27,7 @@ class App extends React.Component {
         return (
             <div className="App" data-theme={this.state.theme}>
                 <Header themeHandler={this.changeTheme} theme={this.state.theme}/>
-                <Main/>
+                <Main goodsData={this.goods}/>
             </div>
         )
     }
