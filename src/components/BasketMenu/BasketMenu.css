@@ -56,3 +56,23 @@
     align-items: center;
     justify-content: flex-start;
 }
+
+.BasketMenu-btn {
+    padding: 10px 15px;
+    display: flex;
+    align-items: flex-start;
+    font-family: "Montserrat", sans-serif;
+    font-size: calc(10px + .25vw);
+    text-transform: uppercase;
+    font-weight: 900;
+    background: rgb(25, 25, 255);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
