@@ -1,4 +1,3 @@
-import { useState } from "react"
 import "./ProductCard.css"
 
 import cart from "./img/cart.png"
