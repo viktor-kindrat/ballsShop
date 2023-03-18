@@ -10,10 +10,13 @@ class App extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            theme: localStorage.getItem("color-theme") || "night"
+            theme: localStorage.getItem("color-theme") || "night",
+            basket: JSON.parse(localStorage.getItem("basket")) || []
         }
-        this.goods = goods
-        this.changeTheme = this.changeTheme.bind(this)
+        this.goods = goods;
+
+        this.changeTheme = this.changeTheme.bind(this);
+        this.addToBasket = this.addToBasket.bind(this)
     }
     changeTheme(){
         this.setState(state=> {
@@ -23,11 +26,19 @@ class App extends React.Component {
         })
         localStorage.setItem("color-theme", this.state.theme === "day" ? "night": "day")
     }
+    addToBasket(item){
+        this.setState(state => {
+            return {
+                basket: [...state.basket, item]
+            }
+        })
+        console.log(this.state.basket)
+    }
     render() {
         return (
             <div className="App" data-theme={this.state.theme}>
-                <Header themeHandler={this.changeTheme} theme={this.state.theme}/>
-                <Main goodsData={this.goods}/>
+                <Header basket={this.state.basket} themeHandler={this.changeTheme} theme={this.state.theme}/>
+                <Main addToBasketHandler={this.addToBasket} goodsData={this.goods}/>
             </div>
         )
     }

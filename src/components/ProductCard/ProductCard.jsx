@@ -13,7 +13,7 @@ function ProductCard (props) {
                     props.data.colors.map(item => <span className="ProductCard-color">{item}</span>)
                 }
             </p>
-            <button className="ProductCard-buyBtn"><img src={cart} alt="cart" /> До кошика</button>
+            <button onClick={()=>props.addToBasketHandler(props.data)} className="ProductCard-buyBtn"><img src={cart} alt="cart" /> До кошика</button>
         </div>
     )
 }

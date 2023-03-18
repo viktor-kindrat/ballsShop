@@ -11,7 +11,7 @@ class Goods extends React.Component {
                 <div className="Goods-container">
                     {
                         this.props.goodsData.map(item => 
-                            <ProductCard data={item}/>    
+                            <ProductCard addToBasketHandler={this.props.addToBasketHandler} data={item}/>    
                         )
                     }
                 </div>

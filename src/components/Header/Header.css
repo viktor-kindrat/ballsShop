@@ -48,7 +48,28 @@
     border: none;
     outline: none;
     cursor: pointer;
-    overflow: hidden;
+    position: relative;
+}
+
+.Header-cartBtn::after {
+    content: attr(data-count);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: rgb(228, 27, 27);
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .Header-btn img {

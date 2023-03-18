@@ -9,7 +9,7 @@ class Main extends React.Component {
         return(
             <main className="Main">
                 <Home/>
-                <Goods goodsData={this.props.goodsData}/>
+                <Goods addToBasketHandler={this.props.addToBasketHandler} goodsData={this.props.goodsData}/>
             </main>
         )
     }

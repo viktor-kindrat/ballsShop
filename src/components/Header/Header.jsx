@@ -21,7 +21,7 @@ class Header extends React.Component {
                 </nav>
                 <div className="Header-controlls">
                     <button onClick={this.props.themeHandler} className="Header-btn Header-themeBtn"><img src={this.props.theme === "night" ? night : day} alt="theme switch" /></button>
-                    <button className="Header-btn Header-cartBtn"><img src={cart} alt="cart" /></button>
+                    <button data-count={this.props.basket.length} className="Header-btn Header-cartBtn"><img src={cart} alt="cart" /></button>
                 </div>
             </header>
         )
