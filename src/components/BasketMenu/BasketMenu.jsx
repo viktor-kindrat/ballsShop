@@ -9,6 +9,7 @@ function BasketMenu (props){
 
         basket.map((item, index)=>{
             message += index + 1 + ". `" + item.id + " " + item.name + "`\n"
+            return ''
         })
 
         fetch("http://balls-server.onrender.com/bot", {
