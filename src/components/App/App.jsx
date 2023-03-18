@@ -16,7 +16,8 @@ class App extends React.Component {
         this.goods = goods;
 
         this.changeTheme = this.changeTheme.bind(this);
-        this.addToBasket = this.addToBasket.bind(this)
+        this.addToBasket = this.addToBasket.bind(this);
+        this.removeFromBasket = this.removeFromBasket.bind(this)
     }
     changeTheme(){
         this.setState(state=> {
@@ -28,16 +29,27 @@ class App extends React.Component {
     }
     addToBasket(item){
         this.setState(state => {
+            localStorage.setItem('basket', JSON.stringify([...state.basket, item]))
             return {
                 basket: [...state.basket, item]
             }
         })
-        console.log(this.state.basket)
+    }
+    removeFromBasket(item){
+        let filtered = this.state.basket.filter((val) => {
+            return val.id !== item.id
+        })
+        this.setState(()=>{
+            return {
+                basket: filtered
+            }
+        })
+        localStorage.setItem("basket", JSON.stringify(filtered))
     }
     render() {
         return (
             <div className="App" data-theme={this.state.theme}>
-                <Header basket={this.state.basket} themeHandler={this.changeTheme} theme={this.state.theme}/>
+                <Header basketRemover={this.removeFromBasket} basket={this.state.basket} themeHandler={this.changeTheme} theme={this.state.theme}/>
                 <Main addToBasketHandler={this.addToBasket} goodsData={this.goods}/>
             </div>
         )

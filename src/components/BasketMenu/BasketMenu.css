@@ -1,0 +1,58 @@
+.BasketMenu {
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: min(350px, 100vw);
+    position: absolute;
+    right: 150px;
+    bottom: 0;
+    transform: translateY(100%);
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #ffffff;
+    color: #141414;
+    padding: 25px;
+    z-index: 5000;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px #00000040;
+    transition: opacity 0.3s;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+}
+
+.BasketMenu[data-shown="false"] {
+    opacity: 0;
+    pointer-events: none;
+    z-index: -5000;
+}
+
+.BasketMenu[data-theme="night"] {
+    background: #05050b;
+    color: #ffffff;
+}
+
+.BasketMenu-headline {
+    font-size: calc(20px + .5vw);
+    text-transform: uppercase;
+}
+
+.BasketMenu-container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
