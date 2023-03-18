@@ -17,9 +17,9 @@ function BasketMenu (props){
             headers: {
               "Content-Type": "application/json",
             },
-            body: {
+            body: JSON.stringify({
                 message: message
-            },
+            }),
         })
         .then((res)=>res.json())
         .then((data)=> {
