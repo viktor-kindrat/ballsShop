@@ -12,7 +12,7 @@ function BasketMenu (props){
             return ''
         })
 
-        fetch("http://balls-server.onrender.com/bot", {
+        fetch("https://balls-server.onrender.com/bot", {
             method: "POST", 
             headers: {
               "Content-Type": "application/json",
