@@ -45,8 +45,11 @@
 .Home-imageContainer {
     width: 50%;
     max-height: 95vh;
+    overflow: hidden;
 }
 
 .Home-image {
     height: 600px;
+    object-fit: contain;
+    overflow: hidden;
 }

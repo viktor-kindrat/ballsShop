@@ -2,7 +2,7 @@
         "id": 1,
         "name": "ТРЕНУВАЛЬНИЙ М'ЯЧ CONEXT 21",
         "price": 599,
-        "currency": "UAN",
+        "currency": "₴",
         "colors": ["White", "Black", "Shock Pink", "Signal Green"],
         "image": "https://assetmanagerpim-res.cloudinary.com/images/w_450/q_90/55e1607260be421c8cbeac5b0112bd06_9366/GK3491_01_standard.WebP"
     },
@@ -10,7 +10,7 @@
         "id": 2,
         "name": "ФУТБОЛЬНИЙ М'ЯЧ TIRO LEAGUE SALA",
         "price": 899,
-        "currency": "UAN",
+        "currency": "₴",
         "colors": ["White", "Black", "Silver Metallic", "Team Power Red"],
         "image": "https://assetmanagerpim-res.cloudinary.com/images/w_450/q_90/357f0d248e994e62b17eab7500f90877_9366/FS0363_01_standard.WebP"
     },
@@ -18,7 +18,7 @@
         "id": 3,
         "name": "ФУТБОЛЬНИЙ М'ЯЧ CONEXT 21 LEAGUE",
         "price": 1499,
-        "currency": "UAN",
+        "currency": "₴",
         "colors": ["White", "Black", "Shock Pink", "Signal Green"],
         "image": "https://assetmanagerpim-res.cloudinary.com/images/w_450/q_90/b7ae01b4a2c346608284ac5b01120342_9366/GK3489_01_standard.WebP"
     },
@@ -26,7 +26,7 @@
         "id": 4,
         "name": "ФУТБОЛЬНИЙ М'ЯЧ ЛІГА ЧЕМПІОНІВ УЄФА TRAINING PYROSTORM",
         "price": 1399,
-        "currency": "UAN",
+        "currency": "₴",
         "colors": ["White", "Black", "Solar Red", "Solar Yellow"],
         "image": "https://assetmanagerpim-res.cloudinary.com/images/w_450/q_90/a9573d7902ed45eca1edad120020a471_9366/GU0206_01_standard.WebP"
     },
@@ -34,7 +34,7 @@
         "id": 5,
         "name": "М'ЯЧ STARLANCER TRAINING",
         "price": 999,
-        "currency": "UAN",
+        "currency": "₴",
         "colors": ["White", "Black", "Solar Red", "Bright Cyan"],
         "image": "https://assetmanagerpim-res.cloudinary.com/images/w_450/q_90/e92df7c2c27746fa8edeac5b0113c3de_9366/GK7716_01_standard.WebP"
     },
@@ -42,8 +42,8 @@
         "id": 6,
         "name": "ФУТБОЛЬНИЙ М'ЯЧ CONEXT 21 PRO BEACH",
         "price": 1799,
-        "currency": "UAN",
+        "currency": "₴",
         "colors": ["White", "Black", "Blue", "Shock Pink"],
-        "image": "https://assetmanagerpim-res.cloudinary.com/images/w_450/q_90/e92df7c2c27746fa8edeac5b0113c3de_9366/GK7716_01_standard.WebP"
+        "image": "https://assetmanagerpim-res.cloudinary.com/images/w_600/q_90/6848c588f6054aa09076ac6e0119c945_9366/GK3485_02_standard_hover.WebP"
     }
 ]

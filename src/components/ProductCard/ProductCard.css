@@ -1,0 +1,102 @@
+.ProductCard {
+    width: min(350px, 100%);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 20px;
+    background: #8080804f;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.ProductCard-image {
+    height: min(250px, 95vw);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    filter: drop-shadow(0 15px 15px #0000006f);
+    -webkit-filter: drop-shadow(0 15px 15px #0000006f);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.ProductCard-headline {
+    font-size: calc(10px + .5vw);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.ProductCard-text {
+    opacity: 0.7;
+    font-weight: 500;
+    font-size: calc(10px + .25vw);
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ProductCard-price {
+    font-size: calc(15px + .25vw);
+}
+
+.ProductCard-color {
+    display: flex;
+    position: relative;
+}
+
+.ProductCard-color::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background: rgb(255, 157, 0);
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.ProductCard-buyBtn {
+    padding: 10px 15px;
+    background: rgb(25, 25, 255);
+    border: none;
+    outline: none;
+    color: #ffffff;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.ProductCard-buyBtn img {
+    height: 25px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}

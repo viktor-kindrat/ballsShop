@@ -8,11 +8,13 @@ class Goods extends React.Component {
         return (
             <section className="Goods">
                 <h2 className="Goods-headline">Каталог товарів</h2>
-                {
-                    this.props.goodsData.map(item => 
-                        <ProductCard data={item}/>    
-                    )
-                }
+                <div className="Goods-container">
+                    {
+                        this.props.goodsData.map(item => 
+                            <ProductCard data={item}/>    
+                        )
+                    }
+                </div>
             </section>
         )
     }
