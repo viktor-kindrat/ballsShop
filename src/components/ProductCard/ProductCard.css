@@ -30,6 +30,9 @@
     font-size: calc(10px + .5vw);
     font-weight: 900;
     text-transform: uppercase;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .ProductCard-text {
