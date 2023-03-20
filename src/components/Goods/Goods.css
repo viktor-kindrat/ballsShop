@@ -22,3 +22,37 @@
     align-items: flex-start;
     justify-content: space-between;
 }
+
+.Goods-search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Goods-searchInput {
+    width: min(100%, 350px);
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.Goods-absent {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: calc(25px + 1.5vw);
+    font-weight: 200;
+    opacity: 0.5;
+    word-break: break-word;
+}
