@@ -91,7 +91,7 @@
     flex-direction: column;
     gap: 25px;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .GoodsPopup-header {
@@ -126,6 +126,10 @@
     gap: 10px;
 }
 
+.GoodsPopup-propertiesGroupListed {
+    flex-direction: column;
+}
+
 .Goods-propertiesHeadline {
     font-weight: 800;
 }
@@ -136,6 +140,41 @@
     flex-wrap: wrap;
     gap: 25px;
     align-items: center;
+}
+
+.GoodsPopup-propertiesGroupListed .GoodsPopup-properties {
+    list-style: elipsis;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.GoodsPopup-propertiesGroupListed .GoodsPopup-properties li {
+    position: relative;
+    left: 25px;
+}
+
+.GoodsPopup-propertiesGroupListed .GoodsPopup-properties li::after {
+    content: "";
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    right: auto;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-4px);
+    background-color: rgb(34, 81, 223);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+}
+
+.GoodsPopup-propertiesGroupListed .GoodsPopup-properties li:last-child::after {
+    display: block;
 }
 
 .GoodsPopup-properties li {

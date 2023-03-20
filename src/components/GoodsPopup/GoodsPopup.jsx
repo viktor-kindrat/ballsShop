@@ -21,6 +21,16 @@ function GoodsPopup(props) {
                     <p className="GoodsPopup-fullDescriptiop">
                         {props.data.description}
                     </p>
+                    <div className="GoodsPopup-propertiesGroup GoodsPopup-propertiesGroupListed">
+                        <h4 className="Goods-propertiesHeadline">Особливості:</h4>
+                        <ul className="GoodsPopup-properties">
+                            {
+                                props.data.features.map(item => (
+                                    <li>{item}</li>
+                                ))
+                            }
+                        </ul>
+                    </div>
                     <div className="GoodsPopup-propertiesGroup">
                         <h4 className="Goods-propertiesHeadline">Доступні кольори:</h4>
                         <ul className="GoodsPopup-properties">
