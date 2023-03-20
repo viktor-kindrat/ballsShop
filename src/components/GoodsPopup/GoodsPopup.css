@@ -86,7 +86,9 @@
 .GoodsPopup-description {
     height: 100%;
     width: 100%;
+    padding: 25px 0;
     overflow: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     gap: 25px;

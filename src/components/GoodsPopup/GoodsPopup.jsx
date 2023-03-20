@@ -43,7 +43,7 @@ function GoodsPopup(props) {
                     </div>
                 </div>
                 <div className="GoodsPopup-btnContainer">
-                    <button className="GoodsPopup-btn"><img src={cart} alt="cart" />Додати до кошика</button>
+                    <button onClick={()=>{props.addToBasketHandler(props.data); props.removerFunction()}} className="GoodsPopup-btn"><img src={cart} alt="cart" />Додати до кошика</button>
                 </div>
             </div>
         </div>
