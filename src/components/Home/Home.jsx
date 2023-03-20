@@ -9,7 +9,7 @@ class Home extends React.Component {
             <section className="Home">
                 <div className="Home-description">
                     <h1 className="Home-headline">Тут лише <span className="Home-headlineBlue">найкращі</span> м'ячі!</h1>
-                    <p className="Home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur exercitationem vitae doloribus. Esse enim expedita voluptas qui reiciendis? Possimus, rerum!</p>
+                    <p className="Home-text">Упевнене вдосконалення, розширення асортименту товарів, синергетичне поєднання та відкритість гармонійної команди забезпечили організації успіх і провідну роль на світовому ринку.</p>
                     <button className="Home-btn">До товарів</button>
                 </div>
                 <div className="Home-imageContainer">

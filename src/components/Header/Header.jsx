@@ -34,6 +34,7 @@ class Header extends React.Component {
                     <div className="Header-navItem">Домашня</div>
                     <div className="Header-navItem">Товари</div>
                     <div className="Header-navItem">Контакти</div>
+                    <div className="Header-navItem">Про нас</div>
                 </nav>
                 <div className="Header-controlls">
                     <button onClick={this.props.themeHandler} className="Header-btn Header-themeBtn"><img src={this.props.theme === "night" ? night : day} alt="theme switch" /></button>
