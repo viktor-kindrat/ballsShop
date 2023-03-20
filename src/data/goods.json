@@ -1,6 +1,8 @@
 [{
         "id": 1,
         "name": "ТРЕНУВАЛЬНИЙ М'ЯЧ CONEXT 21",
+        "subheadline": "ТРЕНУВАЛЬНИЙ М'ЯЧ ІЗ ПОСЛАННЯМ ПРО ЄДНІСТЬ СВІТУ.",
+        "description": "Світ рухається під ритм гарної гри. Динамічний дизайн футбольного м'яча adidas Conext 21 натхненний цим рухом. Панелі м'яча є єдністю шести континентальних федерацій футболу. Машинна строчка забезпечує м'якість контакту та високу міцність.",
         "price": 599,
         "currency": "₴",
         "colors": ["White", "Black", "Shock Pink", "Signal Green"],
@@ -10,6 +12,8 @@
     {
         "id": 2,
         "name": "ФУТБОЛЬНИЙ М'ЯЧ TIRO LEAGUE SALA",
+        "subheadline": "",
+        "description": "",
         "price": 899,
         "currency": "₴",
         "colors": ["White", "Black", "Silver Metallic", "Team Power Red"],
@@ -19,6 +23,8 @@
     {
         "id": 3,
         "name": "ФУТБОЛЬНИЙ М'ЯЧ CONEXT 21 LEAGUE",
+        "subheadline": "",
+        "description": "",
         "price": 1499,
         "currency": "₴",
         "colors": ["White", "Black", "Shock Pink", "Signal Green"],
@@ -28,6 +34,8 @@
     {
         "id": 4,
         "name": "ФУТБОЛЬНИЙ М'ЯЧ ЛІГА ЧЕМПІОНІВ УЄФА TRAINING PYROSTORM",
+        "subheadline": "",
+        "description": "",
         "price": 1399,
         "currency": "₴",
         "colors": ["White", "Black", "Solar Red", "Solar Yellow"],
@@ -37,6 +45,8 @@
     {
         "id": 5,
         "name": "М'ЯЧ STARLANCER TRAINING",
+        "subheadline": "",
+        "description": "",
         "price": 999,
         "currency": "₴",
         "colors": ["White", "Black", "Solar Red", "Bright Cyan"],
@@ -46,6 +56,8 @@
     {
         "id": 6,
         "name": "ФУТБОЛЬНИЙ М'ЯЧ CONEXT 21 PRO BEACH",
+        "subheadline": "",
+        "description": "",
         "price": 1799,
         "currency": "₴",
         "colors": ["White", "Black", "Blue", "Shock Pink"],
