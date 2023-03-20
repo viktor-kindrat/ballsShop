@@ -4,7 +4,8 @@
         "price": 599,
         "currency": "₴",
         "colors": ["White", "Black", "Shock Pink", "Signal Green"],
-        "image": "./images/balls/1.webp"
+        "image": "./images/balls/1.webp",
+        "fullImage": "./images/ballsHighQuality/1.webp"
     },
     {
         "id": 2,
@@ -12,7 +13,8 @@
         "price": 899,
         "currency": "₴",
         "colors": ["White", "Black", "Silver Metallic", "Team Power Red"],
-        "image": "./images/balls/2.webp"
+        "image": "./images/balls/2.webp",
+        "fullImage": "./images/ballsHighQuality/2.webp"
     },
     {
         "id": 3,
@@ -20,7 +22,8 @@
         "price": 1499,
         "currency": "₴",
         "colors": ["White", "Black", "Shock Pink", "Signal Green"],
-        "image": "./images/balls/3.webp"
+        "image": "./images/balls/3.webp",
+        "fullImage": "./images/ballsHighQuality/3.webp"
     },
     {
         "id": 4,
@@ -28,7 +31,8 @@
         "price": 1399,
         "currency": "₴",
         "colors": ["White", "Black", "Solar Red", "Solar Yellow"],
-        "image": "./images/balls/4.webp"
+        "image": "./images/balls/4.webp",
+        "fullImage": "./images/ballsHighQuality/4.webp"
     },
     {
         "id": 5,
@@ -36,7 +40,8 @@
         "price": 999,
         "currency": "₴",
         "colors": ["White", "Black", "Solar Red", "Bright Cyan"],
-        "image": "./images/balls/5.webp"
+        "image": "./images/balls/5.webp",
+        "fullImage": "./images/ballsHighQuality/5.webp"
     },
     {
         "id": 6,
@@ -44,6 +49,7 @@
         "price": 1799,
         "currency": "₴",
         "colors": ["White", "Black", "Blue", "Shock Pink"],
-        "image": "./images/balls/6.webp"
+        "image": "./images/balls/6.webp",
+        "fullImage": "./images/ballsHighQuality/6.webp"
     }
 ]
