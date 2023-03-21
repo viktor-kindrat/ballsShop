@@ -67,7 +67,7 @@ class App extends React.Component {
         console.log(message)
         console.log(basket)
 
-        fetch("http://localhost:5555/bot", {
+        fetch("https://balls-server.onrender.com/bot", {
             method: "POST", 
             headers: {
               "Content-Type": "application/json",
