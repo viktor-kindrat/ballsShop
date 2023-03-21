@@ -18,7 +18,8 @@ class App extends React.Component {
         this.changeTheme = this.changeTheme.bind(this);
         this.addToBasket = this.addToBasket.bind(this);
         this.removeFromBasket = this.removeFromBasket.bind(this);
-        this.clearBasket = this.clearBasket.bind(this)
+        this.clearBasket = this.clearBasket.bind(this);
+        this.sendOrder = this.sendOrder.bind(this)
     }
     changeTheme(){
         this.setState(state=> {
@@ -55,10 +56,37 @@ class App extends React.Component {
         })
         localStorage.setItem("basket", JSON.stringify([]))
     }
+    sendOrder (basket) {
+        let message = `Список товарів: \n \u{1F551} Час запиту: ${new Date().getHours()}:${new Date().getMinutes()}, ${new Date().getDate()}.${new Date().getMonth()}.${new Date().getFullYear()}\n\n`
+
+        basket.map((item)=>{
+            message += `- ID:${item.id} ${item.name} (${item.price})\n\n`
+            return ''
+        })
+
+        console.log(message)
+        console.log(basket)
+
+        fetch("http://localhost:5555/bot", {
+            method: "POST", 
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                "message": message
+            }),
+        })
+        .then((data)=> {
+            this.clearBasket();
+            alert("Надіслано успішно")
+            console.log(data)
+        })
+        return
+    }
     render() {
         return (
             <div className="App" data-theme={this.state.theme}>
-                <Header basketClear={this.clearBasket} basketRemover={this.removeFromBasket} basket={this.state.basket} themeHandler={this.changeTheme} theme={this.state.theme}/>
+                <Header sendOrder={this.sendOrder} basketRemover={this.removeFromBasket} basket={this.state.basket} themeHandler={this.changeTheme} theme={this.state.theme}/>
                 <Main addToBasketHandler={this.addToBasket} goodsData={this.goods}/>
             </div>
         )

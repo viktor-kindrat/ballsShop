@@ -1,33 +1,26 @@
+import { useEffect } from "react";
+
 import "./BasketMenu.css"
 
 import BasketCard from "../BasketCard/BasketCard";
 
 function BasketMenu (props){
     let basket = props.basket;
-    // let sendOrder = (basket) => {
-    //     let message = "Need to deliver: \n"
-
-    //     basket.map((item, index)=>{
-    //         message += index + 1 + ". `" + item.id + " " + item.name + "`\n"
-    //         return ''
-    //     })
-
-    //     fetch("http://localhost:5555/bot", {
-    //         method: "POST", 
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify({
-    //             "message": message
-    //         }),
-    //     })
-    //     .then((data)=> {
-    //         props.basketClear();
-    //         alert("Надіслано успішно")
-    //         console.log(data)
-    //     })
-    //     return
-    // }
+    useEffect(() => {
+        const button = document.getElementById('sendOrderBtn');
+        function handleClick() {
+            props.sendOrder(basket);
+        }
+        if (button) {
+            button.addEventListener('click', handleClick);
+        }
+    
+        return () => {
+            if (button) {
+                button.removeEventListener('click', handleClick);
+            }
+        };
+      }, [document.getElementById('sendOrderBtn'), basket]);
     return (
         <div data-shown={props.open} data-theme={props.theme} className="BasketMenu">
             <h3 className="BasketMenu-headline">Кошик:</h3>
@@ -39,7 +32,7 @@ function BasketMenu (props){
                     (basket.length !== 0 ) ? `До сплати: ${basket.reduce((acc, value)=>{return acc + parseInt(value.price)}, 0)}${basket[0].currency}` : ""
                 }
                 {
-                    (basket.length !== 0 ) ? <button /*onClick={sendOrder(basket)}*/ className="BasketMenu-btn">Сформувати замовлення</button>:""
+                    (basket.length !== 0 ) ? <button id="sendOrderBtn" className="BasketMenu-btn">Сформувати замовлення</button>:""
                 }
             </div>
         </div>
