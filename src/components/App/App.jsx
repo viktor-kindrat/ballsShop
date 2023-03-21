@@ -17,7 +17,8 @@ class App extends React.Component {
 
         this.changeTheme = this.changeTheme.bind(this);
         this.addToBasket = this.addToBasket.bind(this);
-        this.removeFromBasket = this.removeFromBasket.bind(this)
+        this.removeFromBasket = this.removeFromBasket.bind(this);
+        this.clearBasket = this.clearBasket.bind(this)
     }
     changeTheme(){
         this.setState(state=> {
@@ -46,10 +47,18 @@ class App extends React.Component {
         })
         localStorage.setItem("basket", JSON.stringify(filtered))
     }
+    clearBasket() {
+        this.setState(()=>{
+            return {
+                basket: []
+            }
+        })
+        localStorage.setItem("basket", JSON.stringify([]))
+    }
     render() {
         return (
             <div className="App" data-theme={this.state.theme}>
-                <Header basketRemover={this.removeFromBasket} basket={this.state.basket} themeHandler={this.changeTheme} theme={this.state.theme}/>
+                <Header basketClear={this.clearBasket} basketRemover={this.removeFromBasket} basket={this.state.basket} themeHandler={this.changeTheme} theme={this.state.theme}/>
                 <Main addToBasketHandler={this.addToBasket} goodsData={this.goods}/>
             </div>
         )

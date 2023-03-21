@@ -8,7 +8,7 @@ import GoodsPopup from "../GoodsPopup/GoodsPopup"
 function ProductCard (props) {
     let [popupOpen, setPopupOpen] = useState(false)
     return (
-        <div key={props.data.id} className="ProductCard">
+        <div className="ProductCard">
             <GoodsPopup data={props.data} addToBasketHandler={props.addToBasketHandler} removerFunction={()=>setPopupOpen(false)} visibility={popupOpen}/>
             <img className="ProductCard-image" src={props.data.image} alt={props.data.id + " ball card"}/>
             <h3 className="ProductCard-headline">{props.data.name}</h3>

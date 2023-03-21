@@ -16,7 +16,7 @@ function Goods(props) {
             </div>
             <div className="Goods-container">
                 {
-                    (filteredItems.length > 0) ? filteredItems.map(item => <ProductCard addToBasketHandler={props.addToBasketHandler} data={item}/>) : <p className="Goods-absent">Немає товару назва якого містить "{filterText}"</p>
+                    (filteredItems.length > 0) ? filteredItems.map(item => <ProductCard key={item.id} addToBasketHandler={props.addToBasketHandler} data={item}/>) : <p className="Goods-absent">Немає товару назва якого містить "{filterText}"</p>
                 }
             </div>
         </section>

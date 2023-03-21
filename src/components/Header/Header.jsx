@@ -40,7 +40,7 @@ class Header extends React.Component {
                     <button onClick={this.props.themeHandler} className="Header-btn Header-themeBtn"><img src={this.props.theme === "night" ? night : day} alt="theme switch" /></button>
                     <button onClick={this.basketHandle} data-count={this.props.basket.length} className="Header-btn Header-cartBtn"><img src={cart} alt="cart" /></button>
                 </div>
-                <BasketMenu basketRemover={this.props.basketRemover} open={this.state.openBasket} basket={this.props.basket} theme={this.props.theme}/>
+                <BasketMenu basketClear={this.props.basketClear} basketRemover={this.props.basketRemover} open={this.state.openBasket} basket={this.props.basket} theme={this.props.theme}/>
             </header>
         )
     }

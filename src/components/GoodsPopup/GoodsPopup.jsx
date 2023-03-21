@@ -4,7 +4,7 @@ import cart from "./img/cart.png"
 
 function GoodsPopup(props) {
     return(
-        <div data-visibility={props.visibility} className="GoodsPopup">
+        <div key={props.data.id} data-visibility={props.visibility} className="GoodsPopup">
             <button className="GoodsPopup-close" onClick={props.removerFunction}>
                 <span></span><span></span>
             </button>
@@ -25,8 +25,8 @@ function GoodsPopup(props) {
                         <h4 className="Goods-propertiesHeadline">Особливості:</h4>
                         <ul className="GoodsPopup-properties">
                             {
-                                props.data.features.map(item => (
-                                    <li>{item}</li>
+                                props.data.features.map((item, id) => (
+                                    <li key={id}>{item}</li>
                                 ))
                             }
                         </ul>
@@ -35,8 +35,8 @@ function GoodsPopup(props) {
                         <h4 className="Goods-propertiesHeadline">Доступні кольори:</h4>
                         <ul className="GoodsPopup-properties">
                             {
-                                props.data.colors.map(item => (
-                                    <li>{item}</li>
+                                props.data.colors.map((item, id) => (
+                                    <li key={id}>{item}</li>
                                 ))
                             }
                         </ul>
