@@ -1,6 +1,6 @@
 .Goods {
     width: 100%;
-    padding: 25px 150px;
+    padding: var(--padding-prop);
     display: flex;
     gap: 50px;
     flex-direction: column;

@@ -76,3 +76,14 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+
+@media screen and (max-width: 800px) {
+    .BasketMenu {
+        max-height: 90vh;
+        overflow: auto;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+    }
+}

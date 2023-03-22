@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: color 0.2s, background 0.3s;
+    --padding-prop: 25px 150px;
     -webkit-transition: color 0.2s, background 0.3s;
     -moz-transition: color 0.2s, background 0.3s;
     -ms-transition: color 0.2s, background 0.3s;
@@ -21,4 +22,10 @@
 .App[data-theme="day"] {
     background: #ffffff;
     color: #131313;
+}
+
+@media screen and (max-width: 800px) {
+    * {
+        --padding-prop: 25px
+    }
 }

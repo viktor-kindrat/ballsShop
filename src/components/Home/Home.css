@@ -1,6 +1,6 @@
 .Home {
     max-width: 100vw;
-    padding: 25px 150px;
+    padding: var(--padding-prop);
     display: flex;
     align-items: center;
     justify-content: space-between;

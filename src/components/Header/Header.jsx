@@ -12,14 +12,27 @@ class Header extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            openBasket: false
+            openBasket: false,
+            openMenu: false
         }
-        this.basketHandle = this.basketHandle.bind(this)
+        this.basketHandle = this.basketHandle.bind(this);
+        this.menuHandle = this.menuHandle.bind(this)
     }
     basketHandle (){
         this.setState(state=>{
-            return {
-                openBasket: !state.openBasket
+            if (state.openMenu === false || window.innerWidth >= 800) {
+                return {
+                    openBasket: !state.openBasket
+                }
+            }
+        })
+    }
+    menuHandle (){
+        this.setState(state=> {
+            if (state.openBasket === false) {
+                return {
+                    openMenu: !state.openMenu
+                }
             }
         })
     }
@@ -30,7 +43,7 @@ class Header extends React.Component {
                     <img src={logo} alt="logo" className="Header-logoImage"/>
                     <p className="Header-logoText">Abibas</p>
                 </div>
-                <nav className="Heade-nav">
+                <nav data-mobile-view={this.state.openMenu} className="Header-nav">
                     <div className="Header-navItem">Домашня</div>
                     <div className="Header-navItem">Товари</div>
                     <div className="Header-navItem">Контакти</div>
@@ -39,6 +52,12 @@ class Header extends React.Component {
                 <div className="Header-controlls">
                     <button onClick={this.props.themeHandler} className="Header-btn Header-themeBtn"><img src={this.props.theme === "night" ? night : day} alt="theme switch" /></button>
                     <button onClick={this.basketHandle} data-count={this.props.basket.length} className="Header-btn Header-cartBtn"><img src={cart} alt="cart" /></button>
+                    <button onClick={this.menuHandle} className="Header-btn Header-menuBtn">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </button>
+
                 </div>
                 <BasketMenu sendOrder={this.props.sendOrder} basketRemover={this.props.basketRemover} open={this.state.openBasket} basket={this.props.basket} theme={this.props.theme}/>
             </header>
