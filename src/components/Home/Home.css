@@ -54,3 +54,24 @@
     object-fit: contain;
     overflow: hidden;
 }
+
+@media screen and (max-width: 800px) {
+    .Home {
+        margin-top: 50px;
+        flex-direction: column-reverse;
+    }
+    .Home-imageContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Home-image {
+        height: 250px;
+    }
+    .Home-description {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+}

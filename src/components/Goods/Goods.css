@@ -1,6 +1,6 @@
 .Goods {
     width: 100%;
-    padding: var(--padding-prop);
+    padding: 25px;
     display: flex;
     gap: 50px;
     flex-direction: column;
@@ -12,6 +12,7 @@
     font-size: calc(25px + 1.5vw);
     font-weight: 700;
     line-height: calc(30px + 1.5vw);
+    text-align: center;
 }
 
 .Goods-container {
@@ -20,7 +21,7 @@
     gap: 25px;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .Goods-search {
@@ -55,4 +56,10 @@
     font-weight: 200;
     opacity: 0.5;
     word-break: break-word;
+}
+
+@media screen and (max-width: 800px) {
+    .Goods {
+        gap: 25px;
+    }
 }
