@@ -31,13 +31,15 @@ function Header (props){
 
     useEffect(()=>{
         if (props.theme !== "night"){
-            if (window.scrollY >= window.innerHeight) {
+            if (window.scrollY >= window.innerHeight - 75) {
                 setTotalTheme("day")
             } else {
                 setTotalTheme("night")
             }
+        } else {
+            setTotalTheme("night")
         }
-    }, [scroll])
+    }, [scroll, props.theme])
     return(
          <header id="Header" className="Header" data-theme={totalTheme}>
             <div className="Header-logo">

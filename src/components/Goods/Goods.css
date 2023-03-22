@@ -43,6 +43,7 @@
     border-radius: 5px;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
+    box-shadow: 0 0 15px #00000040;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;

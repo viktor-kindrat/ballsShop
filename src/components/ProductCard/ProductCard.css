@@ -5,8 +5,6 @@
     justify-content: space-between;
     gap: 10px;
     flex-direction: column;
-    padding: 20px;
-    background: #8080804f;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -14,26 +12,41 @@
     -o-border-radius: 10px;
 }
 
+.ProductCard-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .ProductCard-image {
     height: min(300px, 95vw);
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 5px;
-    filter: drop-shadow(0 15px 15px #0000006f);
-    -webkit-filter: drop-shadow(0 15px 15px #0000006f);
+    background: #0f0f29;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
 
+.App[data-theme="day"] .ProductCard-image {
+    background: #ebebeb;
+}
+
 .ProductCard-headline {
     font-size: calc(10px + .5vw);
-    font-weight: 900;
+    font-weight: 600;
+    color: #ffffff;
     text-transform: uppercase;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.App[data-theme="day"] .ProductCard-headline {
+    color: #333333;
 }
 
 .ProductCard-text {
