@@ -29,6 +29,11 @@
     font-family: 'Sansita', sans-serif;
     font-size: 25px;
     text-transform: uppercase;
+    color: #ffffff;
+}
+
+.Header[data-theme="day"] .Header-logoText {
+    color: #131313;
 }
 
 .Header-nav {
