@@ -75,3 +75,9 @@
         text-align: center;
     }
 }
+
+@media screen and (max-height: 800px) and (min-width: 800px) {
+    .Home {
+        min-height: 100vh;
+    }
+}
