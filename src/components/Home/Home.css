@@ -36,6 +36,7 @@
     line-height: calc(30px + 3vw);
     text-align: center;
     text-shadow: 0 0 15px #00000063;
+    opacity: 0;
 }
 
 .Home-headlineBlue {
@@ -46,6 +47,7 @@
     width: 80%;
     font-size: 16px;
     text-align: center;
+    opacity: 0;
 }
 
 .Home-btn {
@@ -58,6 +60,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    opacity: 0;
 }
 
 @media screen and (max-width: 800px) {

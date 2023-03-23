@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { gsap } from "gsap";
 import "./Header.css"
 
 import BasketMenu from "../BasketMenu/BasketMenu";
@@ -28,6 +29,13 @@ function Header (props){
             setOpenMenu(!openMenu)
         }
     }
+
+    useEffect(()=>{
+        let tl = gsap.timeline();
+        tl.fromTo(".Header-logo", {opacity: 0}, {opacity: 1, duration: 1});
+        tl.fromTo(".Header-navItem", {x: -10, opacity: 0}, {x: 0, opacity: 1, duration: 1, stagger: 0.2})
+        tl.fromTo(".Header-btn", {x: -10, opacity: 0}, {x: 0, opacity: 1, duration: 1, stagger: 0.2})
+    }, [])
 
     useEffect(()=>{
         if (window.scrollY >= 75) {

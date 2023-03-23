@@ -18,6 +18,7 @@
     gap: 10px;
     align-items: center;
     justify-content: flex-start;
+    opacity: 0;
 }
 
 .Header-logoImage {
@@ -47,6 +48,7 @@
     text-decoration: none;
     color: #ffffff;
     transition: color 0.3s;
+    opacity: 0;
     -webkit-transition: color 0.3s;
     -moz-transition: color 0.3s;
     -ms-transition: color 0.3s;
@@ -72,6 +74,7 @@
     outline: none;
     cursor: pointer;
     position: relative;
+    opacity: 0;
 }
 
 .Header-cartBtn::after {
