@@ -30,6 +30,11 @@ function Header (props){
     }
 
     useEffect(()=>{
+        if (window.scrollY >= 75) {
+            document.querySelector("#Header").style.backdropFilter = "blur(10px)"
+        } else {
+            document.querySelector("#Header").style.backdropFilter = "blur(0)"
+        }
         if (props.theme !== "night"){
             if (window.scrollY >= window.innerHeight - 75) {
                 setTotalTheme("day")
