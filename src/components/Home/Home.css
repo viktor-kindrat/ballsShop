@@ -61,6 +61,16 @@
     outline: none;
     cursor: pointer;
     opacity: 0;
+    transition: filter 0.3s;
+    -webkit-transition: filter 0.3s;
+    -moz-transition: filter 0.3s;
+    -ms-transition: filter 0.3s;
+    -o-transition: filter 0.3s;
+}
+
+.Home-btn:hover {
+    filter: drop-shadow(10px 5px 0 #ffffff);
+    -webkit-filter: drop-shadow(5px 5px 0 #ffffff);
 }
 
 @media screen and (max-width: 800px) {

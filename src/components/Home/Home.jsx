@@ -22,18 +22,28 @@ function Home (props) {
                     cursorChar: '|',
                     loopCount: Infinity,
                     backDelay: 5000,
-                    startDelay: 2000,
+                    startDelay: 3000,
                     backSpeed: 100,
                     typeSpeed: 100,
                     smartBackspace: true,
                   };
                 typed = new Typed('.Home-headlineBlue', options);
             }
+
+            let goToBtnHandler = ()=> {
+                document.querySelector("#GoodsSection").scrollIntoView({
+                    behavior: 'smooth', // smooth scrolling animation
+                    block: 'start', // align top of the element with top of the scrollable ancestor
+                    inline: 'nearest', // scroll to the nearest edge of the element
+                });
+            }
+            document.querySelector("#Home-toGoodsBtn").addEventListener("click", goToBtnHandler)
     
             return ()=>{
                 if (document.querySelector('.Home-headlineBlue')){
                     typed.destroy();
                 }
+                document.querySelector(".Home-btn").removeEventListener("click", goToBtnHandler)
             }
         }
         // eslint-disable-next-line
@@ -43,7 +53,7 @@ function Home (props) {
             <div className="Home-description">
                 <h1 className="Home-headline">Тут лише <span className="Home-headlineBlue">найкращі</span> м'ячі!</h1>
                 <p className="Home-text">Упевнене вдосконалення, розширення асортименту товарів, синергетичне поєднання та відкритість гармонійної команди забезпечили організації успіх і провідну роль на світовому ринку.</p>
-                <button className="Home-btn">До товарів</button>
+                <button id="Home-toGoodsBtn" className="Home-btn">До товарів</button>
             </div>
         </section>
     )

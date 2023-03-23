@@ -9,7 +9,7 @@ function Goods(props) {
         return props.goodsData.filter(item=>item.name.toLowerCase().includes(filterText.toLowerCase()))
     }, [props.goodsData, filterText])
     return (
-        <section className="Goods">
+        <section id="GoodsSection" className="Goods">
             <h2 className="Goods-headline">Каталог товарів</h2>
             <div className="Goods-search">
                 <input className="Goods-searchInput" placeholder="Введіть назву товару" type="text" onChange={e=>{setFilterText(e.target.value)}} />
