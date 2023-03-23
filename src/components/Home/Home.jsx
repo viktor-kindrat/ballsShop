@@ -36,6 +36,7 @@ function Home (props) {
                 }
             }
         }
+        // eslint-disable-next-line
     }, [document.querySelector(".Home")])
     return (
         <section className="Home">
