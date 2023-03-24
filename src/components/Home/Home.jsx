@@ -10,7 +10,7 @@ function Home (props) {
         if (document.querySelector(".Home")) {
             function anim(){
                 gsap.fromTo(".Home-headline", {opacity: 0}, {opacity: 1, duration: 1, ease: "power1.inOut"});
-                gsap.fromTo(".Home-text, .Home-btn", {opacity: 0, y: 50}, {opacity: 1, y: 0, duration: 1.5});
+                gsap.fromTo(".Home-text, .Home-btn", {opacity: 0}, {opacity: 1, duration: 1.5, stagger: 0.2});
             }
             gsap.delayedCall(0.5, anim)
             let typed;

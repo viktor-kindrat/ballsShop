@@ -75,8 +75,12 @@
 
 @media screen and (max-width: 800px) {
     .Home {
-        margin-top: 50px;
+        padding-top: 50px;
         flex-direction: column-reverse;
+        background-size: cover;
+    }
+    .App[data-theme="day"] .Home {
+        background-size: cover;
     }
 }
 

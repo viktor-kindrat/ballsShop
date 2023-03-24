@@ -33,8 +33,8 @@ function Header (props){
     useEffect(()=>{
         let tl = gsap.timeline();
         tl.fromTo(".Header-logo", {opacity: 0}, {opacity: 1, duration: 1});
-        tl.fromTo(".Header-navItem", {x: -10, opacity: 0}, {x: 0, opacity: 1, duration: 1, stagger: 0.2})
-        tl.fromTo(".Header-btn", {x: -10, opacity: 0}, {x: 0, opacity: 1, duration: 1, stagger: 0.2})
+        tl.fromTo(".Header-navItem", {x: -10, opacity: 0}, {x: 0, opacity: 1, duration: 0.6, stagger: 0.2})
+        tl.fromTo(".Header-btn", {x: -10, opacity: 0}, {x: 0, opacity: 1, duration: 0.6, stagger: 0.2})
     }, [])
 
     useEffect(()=>{

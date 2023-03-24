@@ -48,7 +48,7 @@
     text-decoration: none;
     color: #ffffff;
     transition: color 0.3s;
-    opacity: 0;
+    /* opacity: 0.1; */
     -webkit-transition: color 0.3s;
     -moz-transition: color 0.3s;
     -ms-transition: color 0.3s;
