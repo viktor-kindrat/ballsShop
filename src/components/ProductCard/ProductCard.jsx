@@ -12,7 +12,7 @@ function ProductCard (props) {
     function cartHandler () {
         const cartPosition = document.querySelector(".Header-cartBtn").getBoundingClientRect();
         const startPosition = document.querySelector(`#ProductCard-${props.data.id} .ProductCard-buyBtn`).getBoundingClientRect();
-        console.log(startPosition)
+        
         let blinker = `#ProductCard-${props.data.id} .ProductCard-blinker`;
         let tl = gsap.timeline();
         tl.set(blinker, {position: "fixed", zIndex: 0, top: startPosition.y + "px", left: startPosition.x + "px"})

@@ -34,6 +34,7 @@ class App extends React.Component {
                 basket[index].count++;
                 itemUnique = false
             }
+            return ""
         })
 
         if (itemUnique) {
@@ -44,7 +45,6 @@ class App extends React.Component {
         this.setState(() => {return {basket: basket}})
 
         localStorage.setItem("basket", JSON.stringify(basket))
-        console.log(basket)
     }
 
     removeFromBasket(item){
@@ -57,9 +57,9 @@ class App extends React.Component {
                     basket[index] = ""
                 }
             }
+            return ""
         })
         basket = basket.filter(item => item !== "")
-        console.log(basket)
         this.setState(()=>{return {basket: basket}})
         localStorage.setItem("basket", JSON.stringify(basket))
     }
