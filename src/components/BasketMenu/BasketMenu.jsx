@@ -29,7 +29,7 @@ function BasketMenu ({sendOrder, basketRemover, open, basket, theme}){
                     (basket.length !== 0 ) ? basket.map((item, id)=>{return <BasketCard key={id} basketRemover={basketRemover} data={item}/>}): "Порожньо"
                 } 
                 {
-                    (basket.length !== 0 ) ? `До сплати: ${basket.reduce((acc, value)=>{return acc + parseInt(value.price)}, 0)}${basket[0].currency}` : ""
+                    (basket.length !== 0 ) ? `До сплати: ${basket.reduce((acc, value)=>{return acc + value.price * value.count}, 0)}${basket[0].currency}` : ""
                 }
                 {
                     (basket.length !== 0 ) ? <button id="sendOrderBtn" className="BasketMenu-btn">Сформувати замовлення</button>:""

@@ -75,12 +75,9 @@ class App extends React.Component {
         let message = `Список товарів: \n \u{1F551} Час запиту: ${new Date().getHours()}:${new Date().getMinutes()}, ${new Date().getDate()}.${new Date().getMonth()}.${new Date().getFullYear()}\n\n`
 
         basket.map((item)=>{
-            message += `- ID:${item.id} ${item.name} (${item.price})\n\n`
+            message += `- ID:${item.id} ${item.name} (${item.price})\nКількість: ${item.count}\n\n`
             return ''
         })
-
-        console.log(message)
-        console.log(basket)
 
         fetch("https://balls-server.onrender.com/bot", {
             method: "POST", 
@@ -95,6 +92,10 @@ class App extends React.Component {
             this.clearBasket();
             alert("Надіслано успішно")
             console.log(data)
+        })
+        .catch(error=>{
+            alert("Error, please reload and try again")
+            console.log(error)
         })
         return
     }
