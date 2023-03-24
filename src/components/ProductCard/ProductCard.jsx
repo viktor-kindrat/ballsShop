@@ -30,13 +30,15 @@ function ProductCard (props) {
         })
         tl.set(blinker, {
             position: "absolute",
-            top: "15px",
-            right: "15px",
+            top: "25px",
+            right: "25px",
             left: "auto",
             filter: "blur(0)",
             zIndex: 0
         })
-        props.addToBasketHandler(props.data)
+        setTimeout(() => {
+            props.addToBasketHandler(props.data)  
+        }, 1100);
     }
     return (
         <div id={"ProductCard-" + props.data.id} className="ProductCard">
