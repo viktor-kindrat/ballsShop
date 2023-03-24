@@ -74,6 +74,19 @@
     justify-content: space-between;
 }
 
+.ProductCard-btnWrap {
+    display: flex;
+    position: relative;
+}
+
+.ProductCard-blinker {
+    height: 15px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
 .ProductCard-btn {
     border: none;
     outline: none;
@@ -88,6 +101,7 @@
     font-weight: 700;
     cursor: pointer;
     border-radius: 5px;
+    z-index: 1;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -96,9 +110,10 @@
 
 .ProductCard-buyBtn {
     height: 50px;
-    width: 50px;
+    aspect-ratio: 1/1;
     padding: 10px 10px;
     background: rgb(73, 160, 15);
+    flex-shrink: 0;
 }
 
 .ProductCard-infoBtn {
