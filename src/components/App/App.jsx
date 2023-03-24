@@ -72,12 +72,14 @@ class App extends React.Component {
         localStorage.setItem("basket", JSON.stringify([]))
     }
     sendOrder (basket) {
-        let message = `Список товарів: \n \u{1F551} Час запиту: ${new Date().getHours()}:${new Date().getMinutes()}, ${new Date().getDate()}.${new Date().getMonth()}.${new Date().getFullYear()}\n\n`
+        let message = `Нове замовлення: \n \u{1F551} Час запиту: ${new Date().getHours()}:${new Date().getMinutes()}, ${new Date().getDate()}.${new Date().getMonth()}.${new Date().getFullYear()}\n\n`
 
         basket.map((item)=>{
             message += `- ID:${item.id} ${item.name} (${item.price})\nКількість: ${item.count}\n\n`
             return ''
         })
+
+        message+=`\u{1F4B8} Усього до сплати: ${basket.reduce((acc, val)=>{return acc + val.price * val.count}, 0)}${basket[0].currency}`
 
         fetch("https://balls-server.onrender.com/bot", {
             method: "POST", 
