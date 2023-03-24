@@ -22,31 +22,46 @@ class App extends React.Component {
         this.sendOrder = this.sendOrder.bind(this)
     }
     changeTheme(){
-        this.setState(state=> {
-            return {
-                theme: state.theme === "day" ? "night": "day"
-            }
-        })
+        this.setState(state=> {return {theme: state.theme === "day" ? "night": "day"}})
         localStorage.setItem("color-theme", this.state.theme === "day" ? "night": "day")
     }
     addToBasket(item){
-        this.setState(state => {
-            localStorage.setItem('basket', JSON.stringify([...state.basket, item]))
-            return {
-                basket: [...state.basket, item]
+        let it = item;
+        let itemUnique = true;
+        let basket = this.state.basket
+        basket.map((item, index)=>{
+            if (item.id === it.id) {
+                basket[index].count++;
+                itemUnique = false
             }
         })
+
+        if (itemUnique) {
+            it.count = 1
+            basket = [...basket, it]
+        } 
+        
+        this.setState(() => {return {basket: basket}})
+
+        localStorage.setItem("basket", JSON.stringify(basket))
+        console.log(basket)
     }
+
     removeFromBasket(item){
-        let filtered = this.state.basket.filter((val) => {
-            return val.id !== item.id
-        })
-        this.setState(()=>{
-            return {
-                basket: filtered
+        let basket = this.state.basket;
+        basket.map((val, index) => {
+            if (val.id === item.id) {
+                if (val.count !== 1) {
+                    basket[index].count--
+                } else {
+                    basket[index] = ""
+                }
             }
         })
-        localStorage.setItem("basket", JSON.stringify(filtered))
+        basket = basket.filter(item => item !== "")
+        console.log(basket)
+        this.setState(()=>{return {basket: basket}})
+        localStorage.setItem("basket", JSON.stringify(basket))
     }
     clearBasket() {
         this.setState(()=>{

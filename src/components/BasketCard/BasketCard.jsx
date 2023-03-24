@@ -10,7 +10,7 @@ function BasketCard (props) {
             </div>
             <div className="BasketCard-description">
                 <h4 className="BasketCard-headline">{props.data.name}</h4>
-                <p className="BasketCard-price">{props.data.price + props.data.currency + " x 1 = " + props.data.price + props.data.currency}</p>
+                <p className="BasketCard-price">{props.data.price + props.data.currency + " x " + props.data.count + " = " + props.data.price * props.data.count + props.data.currency}</p>
             </div>
             <button onClick={()=>props.basketRemover(props.data)} className="BasketCard-removeBtn"><img src={bin} alt="bin" /></button>
         </div>
