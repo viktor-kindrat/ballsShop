@@ -65,3 +65,20 @@
     height: 100%;
     object-fit: contain;
 }
+
+@media screen and (max-width: 400px) {
+    .BasketCard-image {
+        height: 50px;
+    }
+    .BasketCard-removeBtn {
+        height: 25px;
+        width: 25px;
+    }
+    .BasketCard {
+        gap: 10px;
+    }
+    .BasketCard-headline {
+        max-width: 75px;
+        flex-shrink: 0;
+    }
+}

@@ -75,7 +75,7 @@ function Header (props){
                 </button>
 
             </div>
-            <BasketMenu sendOrder={props.sendOrder} basketRemover={props.basketRemover} open={openBasket} basket={props.basket} theme={props.theme}/>
+            <BasketMenu basketRemover={props.basketRemover} open={openBasket} basket={props.basket} theme={props.theme}/>
         </header>
     )
     

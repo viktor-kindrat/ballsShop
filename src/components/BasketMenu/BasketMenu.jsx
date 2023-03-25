@@ -1,15 +1,39 @@
 import { useEffect } from "react";
+import { gsap } from "gsap";
 
 import "./BasketMenu.css"
 
 import BasketCard from "../BasketCard/BasketCard";
 
-function BasketMenu ({sendOrder, basketRemover, open, basket, theme}){
+function BasketMenu ({basketRemover, open, basket, theme}){
     useEffect(() => {
         const button = document.getElementById('sendOrderBtn');
         function handleClick() {
-            sendOrder(basket);
+            let tl = gsap.timeline();
+            tl.fromTo(".BasketPopup", {
+                display: "none",
+                backdropFilter: "blur(0)",
+                background: "#08071200",
+            }, {
+                display: "flex",
+                backdropFilter: "blur(25px)",
+                background: "#08071277",
+                duration: 0.2
+            })
+            tl.fromTo(".BasketPopup-wrap", {
+                yPercent: -150
+            }, {
+                yPercent: 0,
+                duration: 0.4
+            })
+            tl.fromTo(".BasketPopup-close", {
+                opacity: 0
+            }, {
+                opacity: 1,
+                duration: 0.3
+            })
         }
+
         if (button) {
             button.addEventListener('click', handleClick);
         }
@@ -20,7 +44,7 @@ function BasketMenu ({sendOrder, basketRemover, open, basket, theme}){
             }
         };
         // eslint-disable-next-line
-      }, [document.getElementById('sendOrderBtn'), basket, sendOrder]);
+      }, [document.getElementById('sendOrderBtn')]);
     return (
         <div data-shown={open} data-theme={theme} className="BasketMenu">
             <h3 className="BasketMenu-headline">Кошик:</h3>

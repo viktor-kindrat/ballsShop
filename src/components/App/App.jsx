@@ -5,6 +5,7 @@ import goods from "../../data/goods.json"
 
 import Header from "../Header/Header";
 import Main from "../Main/Main"
+import BasketPopup from "../BasketPopup/BasketPopup";
 
 class App extends React.Component {
     constructor (props) {
@@ -71,14 +72,15 @@ class App extends React.Component {
         })
         localStorage.setItem("basket", JSON.stringify([]))
     }
-    sendOrder (basket) {
-        let message = `Нове замовлення: \n \u{1F551} Час запиту: ${new Date().getHours()}:${new Date().getMinutes()}, ${new Date().getDate()}.${new Date().getMonth()}.${new Date().getFullYear()}\n\n`
+    sendOrder (basket, info) {
+        let message = `Нове замовлення: \nІм'я: ${info.name}\nПрізвище: ${info.surname}\nКонтактний номер: ${info.phone}\nАдреса доставки: ${info.adress} \nЧас запиту: ${new Date().getHours()}:${new Date().getMinutes()}, ${new Date().getDate()}.${new Date().getMonth()}.${new Date().getFullYear()}\n\n`
 
         basket.map((item)=>{
             message += `- ID:${item.id} ${item.name} (${item.price})\nКількість: ${item.count}\n\n`
             return ''
         })
 
+        console.log(basket)
         message+=`\u{1F4B8} Усього до сплати: ${basket.reduce((acc, val)=>{return acc + val.price * val.count}, 0)}${basket[0].currency}`
 
         fetch("https://balls-server.onrender.com/bot", {
@@ -104,7 +106,8 @@ class App extends React.Component {
     render() {
         return (
             <div className="App" data-theme={this.state.theme}>
-                <Header sendOrder={this.sendOrder} basketRemover={this.removeFromBasket} basket={this.state.basket} themeHandler={this.changeTheme} theme={this.state.theme}/>
+                <Header basketRemover={this.removeFromBasket} basket={this.state.basket} themeHandler={this.changeTheme} theme={this.state.theme}/>
+                <BasketPopup sendOrder={this.sendOrder} basketRemover={this.removeFromBasket} basket={this.state.basket}/>
                 <Main addToBasketHandler={this.addToBasket} goodsData={this.goods}/>
             </div>
         )
