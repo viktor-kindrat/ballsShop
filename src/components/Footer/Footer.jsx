@@ -2,23 +2,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import "./Footer.css"
 
-function Footer(){
-    const socialMediaLinks = [
-        {
-          icon: faFacebook,
-          url: 'https://www.facebook.com/abibas',
-        },
-        {
-          icon: faInstagram,
-          url: 'https://www.instagram.com/abibas',
-        },
-        {
-          icon: faTwitter,
-          url: 'https://twitter.com/abibas',
-        },
-      ];
-    return (
-        <footer className={`Footer`}>
+function Footer() {
+  const socialMediaLinks = [
+    {
+      icon: faFacebook,
+      url: 'https://www.facebook.com/abibas',
+    },
+    {
+      icon: faInstagram,
+      url: 'https://www.instagram.com/abibas',
+    },
+    {
+      icon: faTwitter,
+      url: 'https://twitter.com/abibas',
+    },
+  ];
+  return (
+    <footer className={`Footer`}>
       <nav className="Footer-navigation">
         <ul>
           <li><a href="/">Home</a></li>
@@ -44,7 +44,7 @@ function Footer(){
         <p>&copy; {new Date().getFullYear()} Abibas</p>
       </div>
     </footer>
-    )
+  )
 }
 
 export default Footer
