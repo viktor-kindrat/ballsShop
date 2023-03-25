@@ -55,6 +55,7 @@ function BasketPopup(props) {
         return function(){
             submitBtn.removeEventListener("click", sendHandle)
         }
+    // eslint-disable-next-line
     }, [document.querySelector(".BasketPopup-submit")])
     console.log(props.basket)
     return (
