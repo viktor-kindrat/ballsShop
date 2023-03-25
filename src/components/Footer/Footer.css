@@ -1,0 +1,105 @@
+    .Footer {
+        background-color: #1c1c1c;
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 40px;
+    }
+    
+    .Footer .Footer-navigation a {
+        color: #333;
+    }
+    
+    .Footer-navigation ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .Footer-navigation li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    
+    .Footer-social-media ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .Footer-social-media li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    
+    .Footer-company p {
+        margin: 0;
+    }
+    
+    @media only screen and (max-width: 800px) {
+        .Footer-navigation {
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .Footer-social-media {
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .Footer-company {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+        }
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .Footer-navigation li,
+        .Footer-social-media li {
+            display: block;
+            margin: 10px 0;
+        }
+        .Footer-company {
+            margin: 0;
+        }
+    }
+    /* Dark Theme */
+    
+    .Footer {
+        background-color: #05040a;
+        color: #fff;
+    }
+    
+    .Footer .Footer-navigation a {
+        color: #fff;
+    }
+    
+    .Footer .Footer-social-media a {
+        color: #fff;
+    }
+    
+    .Footer .Footer-company p {
+        color: #fff;
+    }
+    /* Day Theme */
+    
+    .App[data-theme="day"] .Footer {
+        background-color: #fff;
+        color: #333;
+    }
+    
+    .App[data-theme="day"] .Footer .Footer-navigation a {
+        color: #333;
+    }
+    
+    .App[data-theme="day"] .Footer .Footer-social-media a {
+        color: #333;
+    }
+    
+    .App[data-theme="day"] .Footer .Footer-company p {
+        color: #333;
+    }

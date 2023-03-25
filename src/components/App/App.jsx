@@ -6,6 +6,7 @@ import goods from "../../data/goods.json"
 import Header from "../Header/Header";
 import Main from "../Main/Main"
 import BasketPopup from "../BasketPopup/BasketPopup";
+import Footer from "../Footer/Footer";
 
 class App extends React.Component {
     constructor (props) {
@@ -109,6 +110,7 @@ class App extends React.Component {
                 <Header basketRemover={this.removeFromBasket} basket={this.state.basket} themeHandler={this.changeTheme} theme={this.state.theme}/>
                 <BasketPopup sendOrder={this.sendOrder} basketRemover={this.removeFromBasket} basket={this.state.basket}/>
                 <Main addToBasketHandler={this.addToBasket} goodsData={this.goods}/>
+                <Footer/>
             </div>
         )
     }
