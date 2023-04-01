@@ -16,7 +16,7 @@ My React practise. Balls shop. Practise of useing hooks, states etc. Sending bil
 
 ## Get in touch with me
 
-###### Telegram: https://mexicancat228.t.me
+###### Telegram: https://t.me/mexicancat228
 
 ---
 
