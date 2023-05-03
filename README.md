@@ -1,28 +1,29 @@
-# Balls Shop 
-My React practise. Balls shop. Practise of useing hooks, states etc. Sending bill on telegram bot. Animations builded with GSAP
+# Ball Shop
 
-## Features:
+This is a React practice project featuring a ball shop. It includes the use of React hooks (useState, useEffect, useMemo, etc.), GSAP animations, TypedJS, server-side integration, adaptivity, and JSON parsing.
+
+## Features
+
 - GSAP animations
-- Useing of React hooks (useState, useEffect, useMemo, etc.)
+- Use of React hooks (useState, useEffect, useMemo, etc.)
 - TypedJS
-- Integration with server side 
+- Server-side integration
 - Adaptivity
 - JSON parsing
 
-#### Link to project: https://ball-shop-abibas.netlify.app/
+### Project Link
 
-## Preview: 
+You can access the project at: https://ball-shop-abibas.netlify.app/
+
+## Preview
+
 ![image](https://user-images.githubusercontent.com/84918090/227777861-930cb3f5-dfad-4077-a530-53bc04b3be58.png)
 
-## Get in touch with me
+## Contact Information
 
-###### Telegram: https://t.me/mexicancat228
+You can get in touch with me via the following channels:
 
----
-
-###### Linked in: https://www.linkedin.com/in/viktor-kindrat/
----
-###### Github: https://github.com/viktor-kindrat
----
-###### Instagram: https://instagram.com/victor_kindrat?utm_medium=copy_link
----
+- Telegram: https://t.me/mexicancat228
+- LinkedIn: https://www.linkedin.com/in/viktor-kindrat/
+- Github: https://github.com/viktor-kindrat
+- Instagram: https://instagram.com/victor_kindrat?utm_medium=copy_link
